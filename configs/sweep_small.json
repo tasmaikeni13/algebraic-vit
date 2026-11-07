@@ -1,0 +1,18 @@
+{
+  "_comment": "Small-tier sweep: ViT-S / ResNet-50 on ImageNet-1k, 50-epoch budget, batch 4096 per trial, one trial per worker.",
+  "size": "S",
+  "batch": 4096,
+  "epochs": 50,
+  "seed": 42,
+  "out": "runs/sweep_small",
+  "grids": {
+    "algebraic": {"lr": [0.0015, 0.003, 0.006], "wd": [0.02, 0.05]},
+    "standard": {"lr": [0.0015, 0.003, 0.006], "wd": [0.02, 0.05]},
+    "resnet": {"lr": [0.4, 0.8, 1.6], "wd": [0.0001]}
+  },
+  "extra_args": {
+    "algebraic": [],
+    "standard": [],
+    "resnet": []
+  }
+}

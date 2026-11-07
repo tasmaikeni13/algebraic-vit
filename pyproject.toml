@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "algebraic-vit"
+version = "0.1.0"
+description = "Algebraic Vision Transformer: image classification without transcendental ops"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "tasmaikeni13"}]
+dependencies = ["jax==0.6.2", "jaxlib==0.6.2", "numpy==2.2.6", "pillow==11.3.0"]
+
+[project.urls]
+Repository = "https://github.com/tasmaikeni13/algebraic-vit"
+
+[project.scripts]
+vision-train = "vision.train:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

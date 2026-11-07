@@ -1,0 +1,12 @@
+{
+  "_comment": "Small main runs: ~26M params, ImageNet-1k, 300 epochs, 3 seeds per arch, batch 4096, full pod.",
+  "size": "S",
+  "batch": 4096,
+  "epochs": 300,
+  "seeds": [42, 43, 44],
+  "architectures": ["algebraic", "standard", "resnet"],
+  "out": "runs/main_small",
+  "mixup": 0.8,
+  "cutmix": 1.0,
+  "hparams_from": "runs/sweep_small/sweep_results.json"
+}

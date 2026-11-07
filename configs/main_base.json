@@ -1,0 +1,12 @@
+{
+  "_comment": "Base main runs: ~91M params, ImageNet-1k, 300 epochs, 1 seed, batch 4096, full pod.",
+  "size": "B",
+  "batch": 4096,
+  "epochs": 300,
+  "seeds": [42],
+  "architectures": ["algebraic", "standard"],
+  "out": "runs/main_base",
+  "mixup": 0.8,
+  "cutmix": 1.0,
+  "hparams_from": "runs/sweep_base/sweep_results.json"
+}

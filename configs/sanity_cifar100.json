@@ -1,0 +1,6 @@
+{
+  "_comment": "CIFAR-100 sanity tier: 32px inputs, patch 4, batch 128. Full tier: 150 epochs.",
+  "algebraic": {"epochs": 150, "lr": 0.003, "wd": 0.05, "label_smoothing": 0.0},
+  "standard": {"epochs": 150, "lr": 0.003, "wd": 0.05, "label_smoothing": 0.1},
+  "resnet": {"epochs": 150, "lr": 0.1, "wd": 0.0001, "label_smoothing": 0.1}
+}

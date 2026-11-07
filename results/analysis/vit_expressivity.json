@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "analysis_sha256": "d07d0298999b0a2da4d66c3050802edd638fe73ea8312717e7f48ce69c9fc864",
+  "scope": "frozen random-projection retrieval and rank; not trained quality",
+  "seeds": 6,
+  "noises": [
+    0.5,
+    1.0
+  ],
+  "gains": [
+    1.0,
+    2.0
+  ],
+  "summary": {
+    "local_conv": {
+      "recall1": 0.00510204081632653,
+      "suppress": 0.0,
+      "combined": 0.0,
+      "eff_rank": 20.814232606723735,
+      "diversity": 0.8160189567538508
+    },
+    "alg_n8": {
+      "recall1": 1.0,
+      "suppress": 0.30594278704384426,
+      "best_sink_b": 6.0,
+      "suppress_curve": {
+        "0.0": 0.0019388051324155753,
+        "2.0": 0.013814431447473267,
+        "4.0": 0.08146862186001032,
+        "6.0": 0.30594278704384426
+      },
+      "combined": 0.6529713935219221,
+      "eff_rank": 37.32625629975118,
+      "diversity": 0.7991867304170878
+    },
+    "alg_n16": {
+      "recall1": 1.0,
+      "suppress": 0.7210801963920739,
+      "best_sink_b": 6.0,
+      "suppress_curve": {
+        "0.0": 0.0003833940669784568,
+        "2.0": 0.01931301314298618,
+        "4.0": 0.32341368921022473,
+        "6.0": 0.7210801963920739
+      },
+      "combined": 0.8605400981960369,
+      "eff_rank": 42.17705497563778,
+      "diversity": 0.9445570795987529
+    },
+    "alg_n24": {
+      "recall1": 1.0,
+      "suppress": 0.8002322376128747,
+      "best_sink_b": 6.0,
+      "suppress_curve": {
+        "0.0": 5.4925179925263775e-05,
+        "2.0": 0.019755408322899716,
+        "4.0": 0.4558429340017836,
+        "6.0": 0.8002322376128747
+      },
+      "combined": 0.9001161188064373,
+      "eff_rank": 43.93952208079588,
+      "diversity": 0.9735862142083057
+    },
+    "softmax": {
+      "recall1": 1.0,
+      "suppress": 0.0,
+      "combined": 0.5,
+      "eff_rank": 37.529726763905074,
+      "diversity": 0.8037520111326192
+    }
+  },
+  "gates": {
+    "combined_vs_softmax_pp": 36.05400981960369,
+    "combined_vs_conv_pp": 86.05400981960369,
+    "eff_rank_ratio_vs_softmax": 1.123830590107103,
+    "verdict": "pass"
+  }
+}

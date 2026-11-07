@@ -1,0 +1,171 @@
+{
+  "schema": 1,
+  "analysis_sha256": "f61267c4c79cfa4ab829a3f9d9a9fc7ff760d10822c4053c49343a35d59b1994",
+  "scope": "analytic TPU-time model + CPU kernel-structure round; TPU proof needs hardware",
+  "audits": {
+    "Ti": {
+      "gflops": 2.5069824,
+      "std_exp": 1398124,
+      "std_erf": 1815552,
+      "alg_rsqrt": 3241044,
+      "std_mparams": 5.538048,
+      "alg_mparams": 5.500452
+    },
+    "S": {
+      "gflops": 9.196996608,
+      "std_exp": 2795248,
+      "std_erf": 3631104,
+      "alg_rsqrt": 6474996,
+      "std_mparams": 21.692928,
+      "alg_mparams": 21.617736
+    },
+    "B": {
+      "gflops": 35.126120448,
+      "std_exp": 5589496,
+      "std_erf": 7262208,
+      "alg_rsqrt": 12942900,
+      "std_mparams": 85.853184,
+      "alg_mparams": 85.7028
+    }
+  },
+  "tpu_time_model": {
+    "Ti": {
+      "special_cost_10x": {
+        "std_units": 2539119160.0,
+        "alg_units": 2516705532.0,
+        "ratio": 0.9911726758030529
+      },
+      "special_cost_20x": {
+        "std_units": 2571255920.0,
+        "alg_units": 2516705532.0,
+        "ratio": 0.9787845357688083
+      },
+      "special_cost_40x": {
+        "std_units": 2635529440.0,
+        "alg_units": 2516705532.0,
+        "ratio": 0.9549145965905051
+      }
+    },
+    "S": {
+      "special_cost_10x": {
+        "std_units": 9261260128.0,
+        "alg_units": 9216421596.0,
+        "ratio": 0.9951584847655409
+      },
+      "special_cost_20x": {
+        "std_units": 9325523648.0,
+        "alg_units": 9216421596.0,
+        "ratio": 0.9883007050200984
+      },
+      "special_cost_40x": {
+        "std_units": 9454050688.0,
+        "alg_units": 9216421596.0,
+        "ratio": 0.974864838380693
+      }
+    },
+    "B": {
+      "special_cost_10x": {
+        "std_units": 35254637488.0,
+        "alg_units": 35164949148.0,
+        "ratio": 0.9974559846195972
+      },
+      "special_cost_20x": {
+        "std_units": 35383154528.0,
+        "alg_units": 35164949148.0,
+        "ratio": 0.9938330716152703
+      },
+      "special_cost_40x": {
+        "std_units": 35640188608.0,
+        "alg_units": 35164949148.0,
+        "ratio": 0.9866656300496309
+      }
+    }
+  },
+  "roofline_model": {
+    "Ti": {
+      "exp10_rsqrt2": {
+        "std_s": 1.2142219636363635e-05,
+        "alg_s": 1.2142219636363635e-05,
+        "ratio": 1.0
+      },
+      "exp20_rsqrt3": {
+        "std_s": 1.2142219636363635e-05,
+        "alg_s": 1.2142219636363635e-05,
+        "ratio": 1.0
+      },
+      "exp40_rsqrt6": {
+        "std_s": 1.2142219636363635e-05,
+        "alg_s": 1.2142219636363635e-05,
+        "ratio": 1.0
+      }
+    },
+    "S": {
+      "exp10_rsqrt2": {
+        "std_s": 3.949546402909091e-05,
+        "alg_s": 3.949546402909091e-05,
+        "ratio": 1.0
+      },
+      "exp20_rsqrt3": {
+        "std_s": 3.949546402909091e-05,
+        "alg_s": 3.949546402909091e-05,
+        "ratio": 1.0
+      },
+      "exp40_rsqrt6": {
+        "std_s": 3.949546402909091e-05,
+        "alg_s": 3.949546402909091e-05,
+        "ratio": 1.0
+      }
+    },
+    "B": {
+      "exp10_rsqrt2": {
+        "std_s": 0.00013983502708363638,
+        "alg_s": 0.00013983502708363638,
+        "ratio": 1.0
+      },
+      "exp20_rsqrt3": {
+        "std_s": 0.00013983502708363638,
+        "alg_s": 0.00013983502708363638,
+        "ratio": 1.0
+      },
+      "exp40_rsqrt6": {
+        "std_s": 0.00013983502708363638,
+        "alg_s": 0.00013983502708363638,
+        "ratio": 1.0
+      }
+    }
+  },
+  "resnet_literature_gflops": {
+    "ResNet-18": 1.82,
+    "ResNet-50": 4.12
+  },
+  "resnet_vs_algebraic": {
+    "ResNet-18": {
+      "gflops": 1.82,
+      "vs_algebraic_Ti_ratio": 1.094219796521739,
+      "note": "accuracy peers, not FLOP peers; ratio > 1 reflects ViT's higher matmul FLOPs, not kernel quality"
+    },
+    "ResNet-50": {
+      "gflops": 4.12,
+      "vs_algebraic_S_ratio": 1.7861282162790697,
+      "note": "accuracy peers, not FLOP peers; ratio > 1 reflects ViT's higher matmul FLOPs, not kernel quality"
+    }
+  },
+  "cpu_microbench": {
+    "alg_ms": 31.226705464844898,
+    "soft_ms": 29.905467633701242,
+    "ratio": 1.0439323018917401,
+    "ci95": [
+      0.9949099230270527,
+      1.1146956146493638
+    ],
+    "rounds": 5,
+    "note": "CPU kernel-structure round only, not TPU proof"
+  },
+  "gates": {
+    "worst_ratio_any_model": 1.0,
+    "best_ratio_any_model": 0.9549145965905051,
+    "transcendental_ops_algebraic": 0,
+    "decisive_wallclock_proven": false,
+    "verdict": "pass"
+  }
+}

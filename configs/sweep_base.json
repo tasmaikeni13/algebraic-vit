@@ -1,0 +1,16 @@
+{
+  "_comment": "Base-tier sweep: ViT-B on ImageNet-1k (no ResNet at Base scale), 50-epoch budget, batch 4096.",
+  "size": "B",
+  "batch": 4096,
+  "epochs": 50,
+  "seed": 42,
+  "out": "runs/sweep_base",
+  "grids": {
+    "algebraic": {"lr": [0.0015, 0.003, 0.006], "wd": [0.02, 0.05]},
+    "standard": {"lr": [0.0015, 0.003, 0.006], "wd": [0.02, 0.05]}
+  },
+  "extra_args": {
+    "algebraic": [],
+    "standard": []
+  }
+}

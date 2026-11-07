@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "analysis_sha256": "fc0285d7791a6a0b47b07644bade66aed70250ffd439556298ab6d53b3e7016d",
+  "scope": "float64 numerical certificates; Lean proofs are the deductive counterpart",
+  "certificates": {
+    "link_identity_max_abs_err": 1.4432899320127035e-15,
+    "rho_bound_max_violation": 0.0,
+    "reciprocal_max_err": 1.1102230246251565e-16,
+    "group_law_max_rel_err": 4.993758480077589e-16,
+    "extreme_finite": true,
+    "extreme_rowsum_err": 2.220446049250313e-16,
+    "cayley_composition_err": 3.3306690738754696e-16,
+    "cayley_unit_norm_err": 2.6645352591003757e-15,
+    "head_grad_max_abs_err": 6.661338147750939e-16
+  },
+  "gates": {
+    "max_identity_err": 2.6645352591003757e-15,
+    "verdict": "pass"
+  }
+}

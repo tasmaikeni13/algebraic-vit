@@ -1,0 +1,32 @@
+# Build and cache artifacts
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+
+# Local environments
+.venv/
+venv/
+ENV/
+
+# Datasets and large caches
+/data/
+results/**/tpu/download/
+results/**/*.log
+paper/*.aux
+paper/*.log
+paper/*.out
+
+# System files
+.DS_Store
+*.swp
+*.swo
+runs/
+*.egg-info/
+build/
+dist/
+hf_upload_staging/
+HF_MODEL_CARD.md
+.agents/
